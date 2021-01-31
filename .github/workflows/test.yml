@@ -1,0 +1,25 @@
+name: test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - develop
+      - 'releases/*'
+
+jobs:
+  test-k14s:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: k14s/setup-k14s-action@v1
+      - run: |
+          ytt version
+          kbld version
+      
+  test-carvel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vmware-tanzu/carvel-setup-action@v1
+      - run: |
+          ytt version
+          kbld version
