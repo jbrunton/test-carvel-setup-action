@@ -23,3 +23,11 @@ jobs:
       - run: |
           ytt version
           kbld version
+          
+  test-carvel2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: carvel-dev/setup-action@v1
+      - run: |
+          ytt version
+          kbld version
