@@ -16,7 +16,7 @@ jobs:
           ytt version
           kbld version
       
-  test-carvel:
+  test-vmware-tanzu:
     runs-on: ubuntu-latest
     steps:
       - uses: vmware-tanzu/carvel-setup-action@v1
@@ -24,7 +24,7 @@ jobs:
           ytt version
           kbld version
           
-  test-carvel2:
+  test-carvel-dev:
     runs-on: ubuntu-latest
     steps:
       - uses: carvel-dev/setup-action@v1
